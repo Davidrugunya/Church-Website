@@ -14,7 +14,7 @@ body{
 
 .floating{float:left;}
 .overlay{
-	background:rgb(0,0,0,0.3);
+	background:rgba(53, 131, 134, 0.3);
 	height:100%;
 }
 .divider{
@@ -24,23 +24,14 @@ body{
 }
 .spacer{
 	background:transparent;
-	height:2.5em !important;
+	height:2em !important;
 }
 .name img{
 	width:60px;
 	height:60px;
 	margin-right:auto;
 }
-.name{
-	float:left;
-	text-align:center;
-	position:relative;
-	font:bold 25px trebuchet ms !important;
-	color:gold;
-	text-decoration:none;
-	cursor:pointer;
-	border:none;
-}
+
 .menubtn{
 	display:none;
 }
@@ -48,11 +39,15 @@ header{
 	display:flex;
 	justify-content:space-between;/*flex-end*/
 	color:white;
-	padding:0.7em;
+	padding:0.4em;
 	background:transparent;
     position:relative;
 	text-align:left;
 	text-shadow:-1px 1px 2px black;
+	position:fixed;
+	width:100%;
+	transition:top 0.3s;
+	z-index:5;
 }
 .menu-list{
 	float:center;
@@ -83,10 +78,10 @@ header{
 	color:gold;
 }
 #showcase {
-	height: 330px;
+	height: 550px;
 	color:white;
 	text-align:center;
-	background:url('images/friends-sunrise.jpg')center no-repeat;
+	background:url('images/modern church.jpg')center no-repeat;
 	background-size:cover;
 	overflow:hidden;
 }
@@ -103,8 +98,18 @@ header{
 	font:bold 40px trebuchet ms;
 }
 @keyframes heading{
-	0% {top: 350px;opacity: 0}
-	100% {top: 150px;opacity: 1}
+	0% {top: 450px;opacity: 0}
+	100% {top: 200px;opacity: 1}
+}
+#showcase .learn{
+	background:transparent;
+	font:normal 18px tahoma;
+	color:white;
+	padding:0.4em 1em;
+	border:solid 2px white;
+	border-radius:22px;
+	text-shadow:-1px 1px 2px #333;
+	cursor:pointer;
 }
 h1{
 	font-size:30px;}
@@ -121,7 +126,7 @@ h4{
 h5{ 
 	font-size:15px;
 	margin:0.2em;
-	color:#1773c2;
+	color:#0ccf8a !important;
 }
 
 main b{
@@ -170,7 +175,7 @@ main b{
 }
 main{
 	margin:0em;
-	padding:0em;
+	padding:0em 5em;
 }
 article{
 	margin:0em;
@@ -189,23 +194,22 @@ section{
 }
 article p{
 	padding:1em 7em;
-	text-align:center;
+	text-align:left;
 }
 section p{
 	display:block;
 	clear:both;
-	padding:0.5em;
+	padding:0em;
 }
 
 .learn{
-	background:#0f89f0;
-	font:normal 18px tahoma;
-	color:white;
-	padding:0.4em 1em;
-	border:solid 1px #0f89f0;
-	border-radius:22px;
-	text-shadow:-1px 1px 2px #333;
-	cursor:pointer;
+	color:#333;
+	background:yellow;
+	font:normal 20px arial;
+	padding:0.4em;
+	border-radius:3px;
+	border:solid 1px yellow;
+	text-shadow:none;
 }
 .learn:hover{
 	background:black !important;
@@ -215,16 +219,17 @@ section p{
 	border:solid 2px red;
 }
 .more{
-	background:#06655e;
+	background:#0f89f0;
+	font:normal 18px tahoma;
 	color:white;
-	padding:0.2em;
-	border:solid 1px #06655e;
-	cursor:pointer;
+	padding:0.4em 1em;
+	border:solid 1px #0f89f0;
+	border-radius:22px;
 	text-shadow:-1px 1px 2px #333;
-	font:normal 20px cursive;
+	cursor:pointer;
 }
 .more:hover{
-	background:#333 !important;
+	background:black !important;
 	color:white;
 }
 .more:active{
@@ -294,13 +299,11 @@ section p{
 #sub-menu a{
 	color:#0ccf8a !important;
 }
-#social{
-	display:block;
-	padding:0px;
-	position:relative;
-	align-self:center;
-	margin:0px;
-}
+#social{display:block;
+	   padding:0px;
+	   position:relative;
+	   align-self:center;
+	   margin:0.8em;}
 #social a{
 	text-decoration:none;
 	padding:0px !important;
@@ -314,7 +317,7 @@ section p{
 	background:transparent;
 	border-radius:50%;
 	padding:0 0 !important;
-	margin:0 !important;
+	margin:0.2 !important;
 	align-items:center;
 	border:none;
 	}
@@ -337,9 +340,8 @@ footer{
 	margin:0px;
 	z-index:3;
 }
-
 footer p{
-	font:normal 15px arial;
+	font:normal 15px tahoma;
 	color:#cdd8d6;
 	line-height:1.6;
 	padding:0.3em;
@@ -349,7 +351,7 @@ footer li{
 	display:inline-block;
 	text-decoration:none;
 	cursor:pointer;
-	margin:0.5em 0em;
+	margin:0.2em;
 	font:normal 17px arial;
 }
 footer a{
@@ -360,8 +362,24 @@ footer a{
 	border-radius:5px;
 	transition:all 0.5s ease;
 }
-footer a:hover{
+footer .link{
+	color:white;
+}
+footer .link:hover{
 	color: red;
+}
+
+#trademark{
+	width:100%;
+	background:#253136 !important;
+	line-height:1.6;
+	padding:0.1em;
+	margin-top:1em;
+	color:#cdd8d6 !important;
+}
+#trademark h5{
+	color:#cdd8d6 !important;
+	font:normal 15px tahoma;
 }
 
 @media screen and (max-width:720px){
@@ -372,9 +390,8 @@ footer a:hover{
 	.line{
 		margin-left:25%;
 	}
-	#showcase p{margin:1em;}
 	#showcase{
-		height:350px;
+		height:500px;
 	}
 	#showcase span{
 		width:100%;
@@ -384,27 +401,21 @@ footer a:hover{
 		100% {top: 220px;opacity: 1}
 	}
 	header .learn{
-		margin:0.5em 25%;
-	}
-	.name{
-		color:#333;
-		text-shadow:none;
+		display:none;
 	}
 	header{
 		display:block;
-		background:white;
+		top:0;
 		position:fixed;
 		width:100%;
-		padding:0.1em 0.2em;
-		margin-bottom:0px;
-		border-bottom:solid 1px black;
-		z-index:3;
+		margin:0 !important;
+		z-index:5;
 	}
 	.menubtn{
 		display:block;
 		float:right;
-		margin:0px;
-		background:white;
+		margin:3px;
+		background:transparent;
 		border:solid 1px transparent;
 		border-radius:5px;
 		cursor:pointer;
@@ -413,20 +424,22 @@ footer a:hover{
 		width:30px;
 		height:5px;
 		margin:0.5rem;
-		background:rgba(0,136,169,1);
+		background:white;
 		transition:all 0.5s ease;
 	}
 	.change .bar1{transform:rotate(-45deg) translate(-10px,10px)}
 	.change .bar2{opacity:0;}
 	.change .bar3{transform:rotate(45deg) translate(-8px,-8px)}
+			
 	.menu-list{
 		display:block;
 		float:right;
 		width:100%;
 		height:0;
 		margin:0;
-		border-radius:6px;
+		padding:0;
 		overflow:hidden;
+		transition:all 0.5s ease;
 		list-style-type:none;
 		z-index:3;
 	}
@@ -434,40 +447,43 @@ footer a:hover{
 		display:block;
 		padding:0;
 		margin:0;
-	    background:#05474d;
-	    border-radius:0px;
-	    padding:16px;
-	    margin:0px;
+		background:#05474d;
+		border-radius:0px;
+		padding:16px;
+		margin:0px;
 	}
 	.link{
 		font:normal 20px tahoma !important;
 		color:white;
-	    text-shadow:-1px 1px 2px #333;
+		text-shadow:-1px 1px 2px #333;
 		cursor:pointer;
 		text-decoration:none;
 		z-index:3;
 	}
+
 	main{
 		width:100%;
+		padding:0.5em;
 	}
 	article{
 		margin:0em;
 		padding:0em;
 	}
 	article img{
-		width:100%;
-		margin:0em;
+		width:99%;
+		margin:0.1em;
 	}
 	
 	article section{
-		width:100% !important;
-		margin:0.2em 0;
+		width:98% !important;
 	}
 	article p{
-		padding:0.1em;
+		padding:0.5em;
+		text-align:left;
 	}
 	section p{
-		padding:0.3em;
+		padding:0.4em;
+		text-align:center;
 	}
 	
 	#give{
@@ -488,18 +504,5 @@ footer a:hover{
 	}
 }
 @media screen and (max-width:500px){
-	
-	header .learn{
-		margin:0.5em 20%;
-		font-size:20px;
-		background:#0f89f0;
-		border:solid 1px #0f89f0;
-	}
-	header .learn:hover{
-		background:#333 !important;
-		border:solid 1px #333;
-	}
-	.navbar_collapse{height:280px !important;}
-	
 	
 }

@@ -13,8 +13,8 @@
 	<body>
 		<div id="showcase">
 			<div class="overlay">
-				<header>
-					<a class="name" href="church.html">New Life <br/>Church</a>
+				<header id="navbar">
+					<a class="name" href="charity.html"><img src = "images/unity-cross white.png"/></a>
 					<button  class="menubtn">
 						<div class="bar1"></div>
 						<div class="bar2"></div>
@@ -89,22 +89,28 @@
 				</section>
 			</div>
 			
+			<div class="spacer"></div>
+			<p><i> "We proclaim him,admonishing and teaching everyone with all wisdom,so that we may present everyone perfect in Christ."<br><strong>Colossians 1:28</strong></i></p>
+			<div class="divider"></div>
+			
 			<article>
 				<section class="floating">
 					<h2>OUR STORY</h2>
-					<p>This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
-					<br/>This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.It does not do anything, it does not say anything.It just fills up space.</p>
-					
-					<p><i> "We proclaim him,admonishing and teaching everyone with all wisdom,so that we may present everyone perfect in Christ." <b><br>Colossians 1:28.</b></i></p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
+					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis?
+					<br/> Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
+					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
 					<br/>
 					<a class="more" href="churchministry.html">Our Ministry</a>
+					<div class="spacer"></div>
 				</section>
+				
 				<section>
-					<img src = "images/modern church-2.jpg"/>
+					<img src = "images/friends-sunrise.jpg"/>
 				</section>
 			</article>
 			
-			<div class="spacer"></div>
+			<div class="divider"></div>
 			
 			<article  id="people" class="gallery">
 				<h2>OUR LEADERSHIP<span class="line"></span></h2>
@@ -154,7 +160,7 @@
 				</section>
 			</article>
 			
-			<div class="spacer"></div>
+			<div class="divider"></div>
 			
 			<article  id="missions" class="gallery">
 				<h2>MISSIONARIES</h2>
@@ -176,7 +182,7 @@
 				</section>
 			</article>
 			
-			<div class="spacer"></div>
+			<div class="divider"></div>
 			
 			<article>
 				<h2>OUR MANDATE</h2>
@@ -191,19 +197,23 @@
 				</section>
 			</article>
 			
+			<div class="divider"></div>
+			
 			<article>
 				<section class="floating">
 					<h2>BELIEFS<span class="line2"></span></h2>
 					<p>We believe that the Bible is God's Word,the product of holy men of old who spoke and wrote as they were moved by the Holy Spirit.It is accurate,authoritative and applicable to our everyday lives.
-					<br>We believe that mankind was made in the image of God.Every human personality is uniquely created,possesses dignity and is worthy of respect and Christian love.
+					<br>We believe that mankind was made in the image of God.Every human is uniquely created,possesses dignity and is worthy of respect and love.
 					</p>
 					<p class="extend" id="one">We believe that sin has separated each of us from God and his purpose for  our lives.As a result,man cannot attain a right relationship with God through his own effort.
 					<br>We believe that Jesus Christ is the only one who can restore us to God.We believe in His virgin birth,sinless life,miracles and teachings.And that his crucifixion was in our place; the full,fitting payment for our sin.
 					<br>We believe that in order to receive forgiveness from God and new birth,we must repent of our sins,believe in the Lord Jesus Christ,and submit to His will for our lives.</p>
 					<br/>
 					<a class="more" onclick="drop('one')">Read More</a>
-					<br/>
+					
+					<div class="spacer"></div>
 				</section>
+				
 				<section >
 					<h2>CORE VALUES<span class="line2"></span></h2>
 					<h4>Christ-Centeredness</h4>
@@ -217,11 +227,9 @@
 					</span>
 					<br/>
 					<a class="more" onclick="drop('two')">Read More</a>
-					<br/>
+					<div class="spacer"></div>
 				</section>
 			</article>
-			
-			<div class="spacer"></div>
 			
 		</main>
 		
@@ -241,22 +249,22 @@
 			<div id = "social">
 				<a href="https://m.facebook.com/home.php?">
 					<button>
-						<img src = "images/facebook-2.png"/>
+						<img src = "images/facebook-gray.png"/>
 					</button>
 				</a>
 				<a href="https://www.twitter.com/">
 					<button>
-						<img src = "images/twitter-2.png"/>
+						<img src = "images/twitter-gray.png"/>
 					</button>
 				</a>
 				<a href="https://www.instagram.com">
 					<button>
-						<img src = "images/instagram-2.png"/>
+						<img src = "images/instagram-gray.png"/>
 					</button>
 				</a>
 				<a href="https://www.youtube.com">
 					<button>
-						<img src = "images/youtube-2.png"/>
+						<img src = "images/youtube-gray circle.png"/>
 					</button>
 				</a>
 			</div>
@@ -277,8 +285,13 @@
 					<a href = "churchcontact.html" >Contact</a>
 				</li>
 			</ul>
-			<!--copyright,trademark and location-->
-			<p>Address  |  myemail@gmail.com  <br/> &copy 2019 New Life Church<p>
+			
+			<h5>LIFE IS BETTER TOGETHER</h5>
+			
+			<div id="trademark">
+				<h5>2727 Beach Rd, Malibu, CA  | newlifechurch@gmail.com</h5>
+				<p> &copy 2019 NEW LIFE CHURCH<p>
+			</div>
 		</footer>
 	</body>
 	
@@ -317,4 +330,16 @@
 		else{document.getElementById(show).style.display="block";
 			 x++;}
 		}
+	
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+		var currentScrollpos =	window.pageYOffset;
+		if (prevScrollpos >	currentScrollpos) {
+	document.getElementById("navbar").style.top = "0";
+	document.getElementById("navbar").style.background = "#1d1c1cb3";
+	} else{
+	document.getElementById("navbar").style.top = "-5em";
+	}
+	prevScrollpos = currentScrollpos;
+	}
 </script>
